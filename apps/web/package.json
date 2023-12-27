@@ -1,28 +1,48 @@
 {
-  "name": "web",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint . --max-warnings 0"
-  },
-  "dependencies": {
-    "@repo/ui": "workspace:*",
-    "next": "^14.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@next/eslint-plugin-next": "^14.0.2",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@types/eslint": "^8.44.7",
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "eslint": "^8.53.0",
-    "typescript": "^5.2.2"
-  }
+    "name": "next-app-template",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@nextui-org/button": "^2.0.26",
+        "@nextui-org/code": "^2.0.24",
+        "@nextui-org/input": "^2.1.16",
+        "@nextui-org/kbd": "^2.0.25",
+        "@nextui-org/link": "^2.0.26",
+        "@nextui-org/navbar": "^2.0.27",
+        "@nextui-org/snippet": "^2.0.30",
+        "@nextui-org/switch": "^2.0.25",
+        "@nextui-org/system": "^2.0.15",
+        "@nextui-org/theme": "^2.1.17",
+        "@react-aria/ssr": "^3.9.1",
+        "@react-aria/visually-hidden": "^3.8.8",
+        "clsx": "^2.0.0",
+        "framer-motion": "^10.16.16",
+        "next": "^14.0.4",
+        "next-themes": "^0.2.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwind-variants": "^0.1.19",
+        "@repo/ui": "workspace:*"
+    },
+    "devDependencies": {
+        "@next/eslint-plugin-next": "^14.0.2",
+        "@repo/eslint-config": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
+        "@types/eslint": "^8.44.7",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3",
+        "tailwindcss": "^3.4.0",
+        "@types/node": "^20.10.5",
+        "@types/react": "^18.2.45",
+        "@types/react-dom": "^18.2.18",
+        "postcss": "^8.4.32",
+        "autoprefixer": "10.4.16",
+        "eslint-config-next": "^14.0.4"
+    }
 }

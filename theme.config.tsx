@@ -20,11 +20,15 @@ const config: DocsThemeConfig = {
   nextThemes: {
     defaultTheme: 'dark'
   },
+  i18n: [
+    { locale: 'en', text: 'English' },
+    { locale: 'zh', text: '中文' },
+  ],
   logo: (
     <div className="flex items-center">
       <Logo height={30} />
       <b className="ml-1.5 hidden text-sm font-semibold sm:block sm:text-base">
-        Tailwind Variants
+        GitMaya
       </b>
       <span className={tvs.badge({ class: 'hidden sm:flex' })}>
         v{getVersion()}
@@ -37,7 +41,7 @@ const config: DocsThemeConfig = {
       config.frontMatter.description ||
       'The power of Tailwind combined with a first-class variant API.';
     const image =
-      config.frontMatter.image || 'https://tailwind-variants.org/banner.png';
+      config.frontMatter.image || '/banner.png';
 
     // || "https://assets.vercel.com/image/upload/v1572282926/swr/twitter-card.jpg";
 

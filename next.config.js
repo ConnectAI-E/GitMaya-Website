@@ -12,5 +12,10 @@ module.exports = withNextra({
         permanent: false
       }
     ];
+  },
+  i18n: {
+    locales: ['en', 'zh'],
+    defaultLocale: 'en',
+    localeDetection: false,
   }
 });

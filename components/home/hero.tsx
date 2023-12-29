@@ -18,7 +18,7 @@ const Hero: FC<HeroProps> = () => {
       <GradientBG className="absolute -z-10 aspect-[605/509] w-full -translate-y-[40%] animate-[appear_1s_ease]" />
       <div className={tvs.box({ class: 'relative z-10 w-full' })}>
         <Logo height={120} />
-        <h1 className="mt-4 text-center text-4xl font-extrabold text-black dark:text-white md:text-5xl">
+        <h1 className="mt-4 text-center text-4xl font-extrabold text-black md:text-5xl dark:text-white">
           Tailwind Variants
         </h1>
         <p className="mt-2 text-center text-lg font-medium">

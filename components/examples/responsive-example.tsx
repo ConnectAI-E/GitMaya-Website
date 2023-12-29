@@ -17,7 +17,7 @@ const ResponsiveExample: FC<ResponsiveExampleProps> = () => {
   // });
 
   return (
-    <div className="relative mx-auto max-w-xl overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-900 sm:flex sm:h-[240px]">
+    <div className="relative mx-auto max-w-xl overflow-hidden rounded-xl bg-white shadow-lg sm:flex sm:h-[240px] dark:bg-gray-900">
       <div className="md:flex">
         <div className="h-[480px] sm:h-full sm:flex-shrink-0">
           <Image

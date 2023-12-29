@@ -1,0 +1,72 @@
+{
+  "name": "gitmaya-website",
+  "private": true,
+  "license": "MIT",
+  "version": "0.0.1",
+  "description": "Tailwind variants documentation site",
+  "author": "Dogtiti <dogtiti921@gmail.com>",
+  "homepage": "https://github.com/ConnectAI-E/GitMaya-Website#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnectAI-E/GitMaya-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ConnectAI-E/GitMaya-Website/issues"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --write ."
+  },
+  "dependencies": {
+    "@react-aria/interactions": "^3.20.1",
+    "@react-aria/radio": "^3.10.0",
+    "@react-aria/ssr": "^3.9.1",
+    "@react-aria/tooltip": "^3.7.0",
+    "@react-aria/utils": "^3.23.0",
+    "@react-stately/radio": "^3.10.1",
+    "@react-stately/tooltip": "^3.4.6",
+    "@vercel/analytics": "^1.1.1",
+    "classnames": "^2.5.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.16",
+    "next": "^14.0.4",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.33.1",
+    "tailwind-variants": "^0.1.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.10",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=16.x",
+    "pnpm": ">=8.x"
+  },
+  "packageManager": "pnpm@8.7.1"
+}

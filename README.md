@@ -12,6 +12,9 @@
     <a href="https://gitmaya.com">🖥 Use Now </a>
 </p>
 
+> [!IMPORTANT]
+> Welcome to the repository for the GitMaya official website and documentation! If you're eager to contribute, head over to the open-source deployment of the core GitMaya code at [GitMaya](https://github.com/ConnectAI-E/GitMaya).
+
 ## Alternatives
 
 `gitmaya` is inspired by the following tools.

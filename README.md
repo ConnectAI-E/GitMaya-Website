@@ -15,6 +15,8 @@
 > [!IMPORTANT]
 > Welcome to the repository for the GitMaya official website and documentation! If you're eager to contribute, head over to the open-source deployment of the core GitMaya code at [GitMaya](https://github.com/ConnectAI-E/GitMaya).
 
+
+
 ## Alternatives
 
 `gitmaya` is inspired by the following tools.
@@ -24,6 +26,18 @@
 - [typoapp](https://typoapp.io/)
 
 They work well but have different focuses and feature sets, try them out as well :)
+
+## Contribution Map
+
+There are four repositories for gitmaya, and this is one of them:
+
+|     | Repository                                                          | Language   | Purpose                            |
+| --- | ------------------------------------------------------------------- | ---------- | ---------------------------------- |
+|     | [GitMaya](https://github.com/ConnectAI-E/GitMaya)                   | Python     | Server-side code                   |
+|     | [GitMaya-Frontend](https://github.com/ConnectAI-E/GitMaya-Frontend) | TypeScript | Frontend code                      |
+| 👉   | [GitMaya-WebSite](https://github.com/ConnectAI-E/GitMaya-Website)   | TypeScript | Official website and documentation |
+|     | [GitMaya-Cli](https://github.com/ConnectAI-E/GitMaya-Cli)           | Python     | Super Git management tool          |
+
 
 ## License
 

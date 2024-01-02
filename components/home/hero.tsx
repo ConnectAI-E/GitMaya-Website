@@ -19,7 +19,7 @@ const Hero: FC<HeroProps> = () => {
       <div className={tvs.box({ class: 'relative z-10 w-full' })}>
         <Logo height={120} />
         <h1 className="mt-4 text-center text-4xl font-extrabold text-black md:text-5xl dark:text-white">
-          Tailwind Variants
+          GitMaya
         </h1>
         <p className="mt-2 text-center text-lg font-medium">
           The power of Tailwind combined with a first-class variant API.
@@ -34,7 +34,7 @@ const Hero: FC<HeroProps> = () => {
             flat: true,
             color: 'neutral'
           })}
-          href="https://github.com/nextui-org/tailwind-variants"
+          href="https://github.com/ConnectAI-E/GitMaya-Website"
           rel="noopener noreferrer"
           target="_blank"
           title="github homepage"

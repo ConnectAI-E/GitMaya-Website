@@ -1,0 +1,226 @@
+import { Tab, Tabs } from 'nextra-theme-docs';
+import { TVComponent, WindowResizer, NXLink } from '@components';
+
+# Getting started
+
+**Tailwind Variants** combines the power of TailwindCSS with a first-class variant API.
+
+## Setup TailwindCSS
+
+**Tailwind Variants** requires you to have TailwindCSS installed in your project. If you haven't installed
+TailwindCSS yet, you can follow the [TailwindCSS installation guide](https://tailwindcss.com/docs/installation).
+
+## Installation
+
+To use **Tailwind Variants** in your project, you can install it as a dependency:
+
+<Tabs items={['npm', 'yarn', 'pnpm']}>
+  <Tab>```bash copy npm install tailwind-variants ```</Tab>
+  <Tab>```bash copy yarn add tailwind-variants ```</Tab>
+  <Tab>```bash copy pnpm add tailwind-variants ```</Tab>
+</Tabs>
+
+## Usage
+
+<br />
+
+<TVComponent
+  as="button"
+  size="sm"
+  color="secondary"
+  tv={{
+    base: 'font-medium bg-blue-500 text-white rounded-full active:opacity-80',
+    variants: {
+      color: {
+        primary: 'bg-blue-500 text-white',
+        secondary: 'bg-purple-500 text-white'
+      },
+      size: {
+        sm: 'text-sm',
+        md: 'text-base',
+        lg: 'px-4 py-3 text-lg'
+      }
+    },
+    defaultVariants: {
+      size: 'md',
+      color: 'primary'
+    },
+    compoundVariants: [
+      {
+        size: ['sm', 'md'],
+        class: 'px-3 py-1'
+      }
+    ]
+  }}
+>
+  Click me
+</TVComponent>
+
+```js copy
+import { tv } from 'tailwind-variants';
+
+const button = tv({
+  base: 'font-medium bg-blue-500 text-white rounded-full active:opacity-80',
+  variants: {
+    color: {
+      primary: 'bg-blue-500 text-white',
+      secondary: 'bg-purple-500 text-white'
+    },
+    size: {
+      sm: 'text-sm',
+      md: 'text-base',
+      lg: 'px-4 py-3 text-lg'
+    }
+  },
+  compoundVariants: [
+    {
+      size: ['sm', 'md'],
+      class: 'px-3 py-1'
+    }
+  ],
+  defaultVariants: {
+    size: 'md',
+    color: 'primary'
+  }
+});
+
+return (
+  <button className={button({ size: 'sm', color: 'secondary' })}>
+    Click me
+  </button>
+);
+```
+
+## Responsive variants (optional)
+
+If you want to use responsive variants, you need to add the **Tailwind Variants** `wrapper` to your TailwindCSS config file `tailwind.config.js`.
+
+```js copy /withTV/
+// tailwind.config.js
+const { withTV } = require('tailwind-variants/transformer');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = withTV({
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {}
+  },
+  plugins: []
+});
+```
+
+<details>
+  <summary>Why do I need to add the transformer?</summary>
+  <div className="py-2 pl-3">
+    If you are wondering why you need to add the transformer, it's because
+    **TailwindCSS** uses something called
+    [JIT](https://tailwindcss.com/blog/tailwindcss-v3#just-in-time-all-the-time)
+    which compiles your CSS on demand based on the classes you use in your HTML
+    / JSX files / etc. As the responsive variants need to be dynamic the JIT
+    compiler doesn't know what classes to compile, so we need to add the
+    transformer to tell the compiler what classes to compile.
+  </div>
+</details>
+
+### Responsive variants usage
+
+**Tailwind Variants** allows you to apply variants to different screen sizes.
+
+<br />
+
+<WindowResizer
+  iframeSrc="/docs/examples/intro-responsive-variants"
+  iframeTitle="Responsive variants"
+  height="120px"
+/>
+
+```js copy {15, 20-23}
+import { tv } from 'tailwind-variants';
+
+const button = tv(
+  {
+    base: 'font-semibold text-white py-1 px-3 rounded-full active:opacity-80',
+    variants: {
+      color: {
+        primary: 'bg-blue-500 hover:bg-blue-700',
+        secondary: 'bg-purple-500 hover:bg-purple-700',
+        success: 'bg-green-500 hover:bg-green-700',
+        error: 'bg-red-500 hover:bg-red-700'
+      }
+    }
+  },
+  {
+    responsiveVariants: ['xs', 'sm', 'md'] // `true` to apply to all screen sizes
+  }
+);
+
+button({
+  color: {
+    initial: 'primary',
+    xs: 'secondary',
+    sm: 'success',
+    md: 'error'
+  }
+});
+
+/**
+ * Result:
+ * font-semibold text-white py-1 px-3 rounded-full active:opacity-80 bg-blue-500 hover:bg-blue-700
+ * xs:bg-purple-500 xs:hover:bg-purple-700 sm:bg-green-500 sm:hover:bg-green-700 md:bg-red-500
+ * md:hover:bg-red-700
+ */
+```
+
+## IntelliSense setup (optional)
+
+To enable autocompletion for **Tailwind Variants** you can follow the instructions below.
+
+<Tabs items={['VSCode', 'Neovim']}>
+  <Tab>
+    If you are using **VSCode** and the [**TailwindCSS IntelliSense Extension**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), you have to add the following to your `settings.json` file.
+
+    ```json copy
+      {
+        "tailwindCSS.experimental.classRegex": [
+          ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+        ]
+      }
+    ```
+
+  </Tab>
+  <Tab>
+    If you are using **Neovim**, install [**Tailwind CSS Language Server**](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss) and add the following to your configuration.
+
+    ```lua copy
+    require('lspconfig').tailwindcss.setup({
+      settings = {
+        tailwindCSS = {
+          experimental = {
+            classRegex = {
+              { "tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" }
+            },
+          },
+        },
+      },
+    })
+    ```
+
+  </Tab>
+</Tabs>
+
+## Prettier plugin setup (optional)
+
+If you are using [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+to sort your class names, you can add `tv` to the list of functions that
+should be sorted.
+
+```js
+module.exports = {
+  plugins: [require('prettier-plugin-tailwindcss')],
+  tailwindFunctions: ['tv']
+};
+```
+
+## Contributing
+
+PR's on **Tailwind Variants** are always welcome, please see our <NXLink href="https://github.com/nextui-org/tailwind-variants/blob/main/CONTRIBUTING.md">contribution guidelines</NXLink> to learn how you can contribute to this project.

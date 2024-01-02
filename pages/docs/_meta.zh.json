@@ -1,0 +1,17 @@
+{
+  "introduction": {
+    "title": "简介"
+  },
+  "getting-started": "Getting Started",
+  "comparison": "Comparison",
+  "variants": "Variants",
+  "slots": "Slots",
+  "overriding-styles": "Overriding Styles",
+  "composing-components": "Composing Components",
+  "examples": "Examples",
+  "typescript": "Typescript",
+  "config": "Config",
+  "api-reference": "API Reference",
+  "acknowledgements": "Acknowledgements",
+  "faq": "FAQ"
+}

@@ -88,12 +88,12 @@ const config: DocsThemeConfig = {
     const router = useRouter();
     const { frontMatter } = useConfig();
 
-    const defaultTitle = frontMatter.overrideTitle || 'Tailwind Variants';
+    const defaultTitle = '';
 
     return {
       description: frontMatter.description,
       defaultTitle,
-      titleTemplate: router.pathname !== '/' ? `%s – ${defaultTitle}` : ''
+      titleTemplate: router.pathname !== '/' ? `${defaultTitle}` : ''
     };
   },
   project: {

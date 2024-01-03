@@ -1,11 +1,11 @@
 {
   "index": {
-    "title": "Home",
+    "title": "主页",
     "type": "page",
     "display": "hidden"
   },
   "docs": {
-    "title": "Docs",
+    "title": "文档",
     "type": "page",
     "theme": {
       "footer": false

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useRouter} from 'next/router';
 import {DocsThemeConfig, useConfig} from 'nextra-theme-docs';
 
@@ -19,9 +19,12 @@ const getVersion = () => {
 
 const config: DocsThemeConfig = {
   darkMode: true,
-
+  themeSwitch: {
+    component:undefined,
+  },
   nextThemes: {
     defaultTheme: 'dark',
+    forcedTheme: 'dark',
   },
   i18n: [
     { locale: 'en', text: 'English' },

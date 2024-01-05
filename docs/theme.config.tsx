@@ -1,10 +1,12 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
+import React, {useEffect} from 'react';
+import {useRouter} from 'next/router';
+import {DocsThemeConfig, useConfig} from 'nextra-theme-docs';
 
-import { tvs, Logo, NextUILogo } from '@components';
+import {tvs} from '@components';
 
 import pkg from './package.json';
+import {ifInIndex} from '@utils';
+import {LogoDark, LogoLight} from '@components/logo/logo';
 
 const DEFAULT_VERSION = '0.1.14';
 
@@ -17,36 +19,44 @@ const getVersion = () => {
 
 const config: DocsThemeConfig = {
   darkMode: true,
+
   nextThemes: {
-    defaultTheme: 'dark'
+    defaultTheme: 'dark',
   },
   i18n: [
     { locale: 'en', text: 'English' },
-    { locale: 'zh', text: '中文' }
+    { locale: 'zh', text: '中文' },
   ],
-  logo: (
-    <div className="flex items-center">
-      <Logo height={30} />
-      <b className="ml-1.5 hidden text-sm font-semibold sm:block sm:text-base">
-        GitMaya
-      </b>
-      <span className={tvs.badge({ class: 'hidden sm:flex' })}>
-        v{getVersion()}
-      </span>
-    </div>
-  ),
+  logo: function useHead() {
+    const { route } = useRouter();
+    const { darkMode } = useConfig();
+    console.log(darkMode);
+    return (
+      <div className="flex items-center">
+        <LogoDark height={ 32 }/>
+        { ifInIndex(route) ? null : (
+          <>
+            <b
+              className="ml-1.5 hidden text-sm font-semibold sm:block sm:text-base">
+              GitMaya
+            </b>
+            <span
+              className={ tvs.badge({ class: 'hidden sm:flex' }) }>v{ getVersion() }</span>
+          </>) }
+      </div>
+    );
+  },
   head: function useHead() {
     const config = useConfig();
+    console.log(config);
     const description =
       config.frontMatter.description ||
       'The power of Tailwind combined with a first-class variant API.';
     const image = config.frontMatter.image || '/banner.png';
 
-    // || "https://assets.vercel.com/image/upload/v1572282926/swr/twitter-card.jpg";
-
     return (
       <>
-        {/* Favicons, meta */}
+        {/* Favicons, meta */ }
         <link
           href="/favicon/apple-touch-icon.png"
           rel="apple-touch-icon"
@@ -64,48 +74,49 @@ const config: DocsThemeConfig = {
           sizes="16x16"
           type="image/png"
         />
-        <link href="/favicon/site.webmanifest" rel="manifest" />
+        <link href="/favicon/site.webmanifest" rel="manifest"/>
         <link
           color="#000000"
           href="/favicon/safari-pinned-tab.svg"
           rel="mask-icon"
         />
-        <meta content="#ffffff" name="msapplication-TileColor" />
-        <meta content="en" httpEquiv="Content-Language" />
-        <meta content={description} name="description" />
-        <meta content={description} name="og:description" />
-        <meta content="summary_large_image" name="twitter:card" />
-        <meta content="@nextui-org" name="twitter:site" />
-        <meta content={image} name="twitter:image" />
-        <meta content={`${config.title} – tailwind-variants`} name="og:title" />
-        <meta content={image} name="og:image" />
-        <meta content="tailwind-variants" name="apple-mobile-web-app-title" />
+        <meta content="#ffffff" name="msapplication-TileColor"/>
+        <meta content="en" httpEquiv="Content-Language"/>
+        <meta content={ description } name="description"/>
+        <meta content={ description } name="og:description"/>
+        <meta content="summary_large_image" name="twitter:card"/>
+        <meta content="@nextui-org" name="twitter:site"/>
+        <meta content={ image } name="twitter:image"/>
+        <meta content={ `${ config.title } – tailwind-variants` }
+              name="og:title"/>
+        <meta content={ image } name="og:image"/>
+        <meta content="tailwind-variants" name="apple-mobile-web-app-title"/>
       </>
     );
   },
   useNextSeoProps: function SEO() {
     const router = useRouter();
     const { frontMatter } = useConfig();
-
+    console.log(frontMatter);
     const defaultTitle = '';
 
     return {
       description: frontMatter.description,
       defaultTitle,
-      titleTemplate: router.pathname !== '/' ? `${defaultTitle}` : ''
+      titleTemplate: router.pathname !== '/' ? `${ defaultTitle }` : '',
     };
   },
   project: {
-    link: 'https://github.com/nextui-org/tailwind-variants'
+    link: 'https://github.com/nextui-org/tailwind-variants',
   },
   chat: {
-    link: 'https://discord.gg/9b6yyZKmH4'
+    link: 'https://discord.gg/9b6yyZKmH4',
   },
   docsRepositoryBase:
     'https://github.com/nextui-org/tailwind-variants-docs/blob/main',
   gitTimestamp: '',
   sidebar: {
-    defaultMenuCollapseLevel: 1
+    defaultMenuCollapseLevel: 1,
   },
   footer: {
     text: (
@@ -119,15 +130,15 @@ const config: DocsThemeConfig = {
             title="nextui.org homepage"
           >
             <span className="mr-1">Powered by</span>
-            <NextUILogo height={30} />
+            <LogoLight height={ 30 }/>
           </a>
         </div>
         <p className="mt-6 text-xs">
-          MIT {new Date().getFullYear()} The Tailwind Variants Project.
-        </p>
+          MIT { new Date().getFullYear() } The Tailwind Variants Project.
+        </p>;
       </div>
-    )
-  }
+    ),
+  },
 };
 
 export default config;

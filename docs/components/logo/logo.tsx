@@ -70,5 +70,4 @@ export const LogoLight: FC<LogoProps> = (props) => {
   );
 };
 
-
 export default LogoDark;

@@ -1,0 +1,11 @@
+.idea/
+.next/
+node_modules/
+coverage/
+build/
+website/public/
+pnpm-lock.yaml
+!.*.js
+!.*.cjs
+!.*.mjs
+!.*.ts

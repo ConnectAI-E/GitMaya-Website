@@ -2,195 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 @layer base {
-    :root {
-        --gradient-angle: 360deg;
+  :root {
+    --gradient-angle: 360deg;
 
-        --background: 0 0% 100%;
-        --foreground: 240 10% 3.9%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-        --muted: 240 4.8% 95.9%;
-        --muted-foreground: 240 3.8% 45%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
 
-        --popover: 0 0% 100%;
-        --popover-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-        --card: 0 0% 100%;
-        --card-hovered: 0 0% 98%;
-        --card-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-hovered: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
 
-        --border: 240 5.9% 90%;
-        --input: 240 5.9% 90%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
 
-        --primary: 211 61% 48%;
-        --primary-foreground: 0 0% 98%;
+    --primary: 211 61% 48%;
+    --primary-foreground: 0 0% 98%;
 
-        --secondary: 240 4.8% 95.9%;
-        --secondary-foreground: 240 5.9% 10%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-        --accent: 240 4.8% 95.9%;
-        --accent-foreground: ;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: ;
 
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-        --error-label: 0 84.2% 60.2%;
+    --error-label: 0 84.2% 60.2%;
 
-        --ring: 240 5% 64.9%;
+    --ring: 240 5% 64.9%;
 
-        --radius: 0.5rem;
+    --radius: 0.5rem;
 
-        --difficulty-beginner: 201 96% 32%;
-        --difficulty-easy: 150 100% 25%;
-        --difficulty-medium: 35 92% 33%;
-        --difficulty-hard: 0 72% 51%;
-        --difficulty-extreme: 262 83% 58%;
+    --difficulty-beginner: 201 96% 32%;
+    --difficulty-easy: 150 100% 25%;
+    --difficulty-medium: 35 92% 33%;
+    --difficulty-hard: 0 72% 51%;
+    --difficulty-extreme: 262 83% 58%;
 
-        --difficulty-beginner-dark: 199 69% 72%;
-        --difficulty-easy-dark: 142 77% 73%;
-        --difficulty-medium-dark: 31 86% 60%;
-        --difficulty-hard-dark: 0 91% 71%;
-        --difficulty-extreme-dark: 269 97% 85%;
-    }
+    --difficulty-beginner-dark: 199 69% 72%;
+    --difficulty-easy-dark: 142 77% 73%;
+    --difficulty-medium-dark: 31 86% 60%;
+    --difficulty-hard-dark: 0 91% 71%;
+    --difficulty-extreme-dark: 269 97% 85%;
+  }
 
-    .dark {
-        --background: 240 10% 3.9%;
-        --foreground: 0 0% 98%;
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-        --muted: 240 3.7% 15.9%;
-        --muted-foreground: 240 5% 64.9%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-        --popover: 240 10% 3.9%;
-        --popover-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-        --card: 240 10% 3.9%;
-        --card-hovered: 240 10% 6.9%;
-        --card-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-hovered: 240 10% 6.9%;
+    --card-foreground: 0 0% 98%;
 
-        --border: 240 3.7% 15.9%;
-        --input: 240 3.7% 15.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
 
-        --primary: 211 61% 48%;
-        --primary-foreground: 0 0% 98%;
+    --primary: 211 61% 48%;
+    --primary-foreground: 0 0% 98%;
 
-        --secondary: 240 3.7% 15.9%;
-        --secondary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-        --accent: 240 3.7% 15.9%;
-        --accent-foreground: ;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: ;
 
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 85.7% 97.3%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
 
-        --error-label: 0 92.2% 64.9%;
+    --error-label: 0 92.2% 64.9%;
 
-        --ring: 240 3.7% 15.9%;
-    }
+    --ring: 240 3.7% 15.9%;
+  }
 }
 
-
 @layer base {
-    html {
-    }
+  html {
+  }
 
-    article,
-    main {
-        overflow: visible !important;
-    }
+  article,
+  main {
+    overflow: visible !important;
+  }
 
-    .dark body {
-    }
+  .dark body {
+  }
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
-    .dark .dark\:nx-text-slate-100 {
-        color: rgba(241, 245, 249, 1) !important;
-    }
+  .dark .dark\:nx-text-slate-100 {
+    color: rgba(241, 245, 249, 1) !important;
+  }
 
-    .dark .nextra-content {
-        color: rgba(241, 245, 249, 0.85) !important;
-    }
+  .dark .nextra-content {
+    color: rgba(241, 245, 249, 0.85) !important;
+  }
 }
 
 .dragging-ew {
-    user-select: none !important;
-    cursor: ew-resize !important;
+  user-select: none !important;
+  cursor: ew-resize !important;
 }
 
 .dragging-ew * {
-    user-select: none !important;
-    cursor: ew-resize !important;
+  user-select: none !important;
+  cursor: ew-resize !important;
 }
 
-
-
 @property --gradient-angle {
-    syntax: '<angle>'; /* <- defined as type angle for the transition to work */
-    initial-value: 360deg;
-    inherits: false;
+  syntax: '<angle>'; /* <- defined as type angle for the transition to work */
+  initial-value: 360deg;
+  inherits: false;
 }
 
 @keyframes gradient-rotate {
-    0% {
-        --gradient-angle: 360deg;
-    }
+  0% {
+    --gradient-angle: 360deg;
+  }
 
-    100% {
-        --gradient-angle: 0deg;
-    }
+  100% {
+    --gradient-angle: 0deg;
+  }
 }
 
 .hero-join-button {
-    background: linear-gradient(
-            var(--gradient-angle),
-            hsla(0, 0%, 100%, 0.5),
-            hsla(0, 0%, 100%, 0.1),
-            #fff,
-            hsla(0, 0%, 100%, 0.3)
-    )!important;
-    animation: gradient-rotate 5s linear infinite reverse;
+  background: linear-gradient(
+    var(--gradient-angle),
+    hsla(0, 0%, 100%, 0.5),
+    hsla(0, 0%, 100%, 0.1),
+    #fff,
+    hsla(0, 0%, 100%, 0.3)
+  ) !important;
+  animation: gradient-rotate 5s linear infinite reverse;
 }
 
-
-
 .animate-bg-gradient-to-center {
-    animation: bg-to-center 1s 0.75s ease 1 forwards;
+  animation: bg-to-center 1s 0.75s ease 1 forwards;
 }
 
 .animate-bg-gradient-to-center-title {
-    animation: bg-to-center 1s 0.95s ease 1 forwards;
+  animation: bg-to-center 1s 0.95s ease 1 forwards;
 }
 
 @keyframes bg-to-center {
-    to {
-        background-position: center;
-    }
+  to {
+    background-position: center;
+  }
 }
 
 .animate-newstar {
-    opacity: 0;
-    animation: newstar 1.5s 0.95s ease 1 forwards;
+  opacity: 0;
+  animation: newstar 1.5s 0.95s ease 1 forwards;
 }
 
 .animate-oldstar {
-    opacity: 1;
-    animation: oldstar 1.5s 0.95s ease 1 forwards;
+  opacity: 1;
+  animation: oldstar 1.5s 0.95s ease 1 forwards;
 }
 
 @keyframes newstar {
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes oldstar {
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
-

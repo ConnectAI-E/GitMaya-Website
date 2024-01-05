@@ -20,11 +20,11 @@ const getVersion = () => {
 const config: DocsThemeConfig = {
   darkMode: true,
   themeSwitch: {
-    component:undefined,
+    // component:undefined,
   },
   nextThemes: {
     defaultTheme: 'dark',
-    forcedTheme: 'dark',
+    // forcedTheme: 'dark',
   },
   i18n: [
     { locale: 'en', text: 'English' },
@@ -51,10 +51,9 @@ const config: DocsThemeConfig = {
   },
   head: function useHead() {
     const config = useConfig();
-    console.log(config);
     const description =
       config.frontMatter.description ||
-      'The power of Tailwind combined with a first-class variant API.';
+      'Make Git Flow Again - 222 ';
     const image = config.frontMatter.image || '/banner.png';
 
     return (

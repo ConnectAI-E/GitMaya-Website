@@ -3,7 +3,7 @@ import type { FC, HTMLAttributes } from 'react';
 import { useState } from 'react';
 import cn from 'classnames';
 
-import { CopyIcon, CheckIcon, Tooltip } from '@components';
+import { CopyIcon, CheckIcon, Tooltip } from '../index';
 
 interface Props {}
 

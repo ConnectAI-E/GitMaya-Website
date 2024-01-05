@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { tv } from 'tailwind-variants';
 
-import { useIsomorphicLayoutEffect, useIsMobile } from '@hooks';
+import { useIsomorphicLayoutEffect, useIsMobile } from '../../hooks';
 
 const resizer = tv({
   base: 'flex items-center justify-end absolute right-[5px] z-10 w-auto xs:hidden',

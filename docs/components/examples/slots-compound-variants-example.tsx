@@ -3,7 +3,7 @@ import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 import { useState } from 'react';
 
-import { RadioGroup, Radio } from '@components';
+import { RadioGroup, Radio } from '../index';
 
 const alert = tv({
   slots: {

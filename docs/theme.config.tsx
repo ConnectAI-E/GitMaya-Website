@@ -22,7 +22,7 @@ const config: DocsThemeConfig = {
   },
   i18n: [
     { locale: 'en', text: 'English' },
-    { locale: 'zh', text: '中文' },
+    { locale: 'zh', text: '中文' }
   ],
   logo: (
     <div className="flex items-center">
@@ -40,8 +40,7 @@ const config: DocsThemeConfig = {
     const description =
       config.frontMatter.description ||
       'The power of Tailwind combined with a first-class variant API.';
-    const image =
-      config.frontMatter.image || '/banner.png';
+    const image = config.frontMatter.image || '/banner.png';
 
     // || "https://assets.vercel.com/image/upload/v1572282926/swr/twitter-card.jpg";
 

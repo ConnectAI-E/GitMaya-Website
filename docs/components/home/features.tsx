@@ -1,10 +1,10 @@
 import type { FC } from 'react';
 
-import FlashIcon from '@components/icons/flash';
-import CodeDocumentIcon from '@components/icons/code-document';
-import MagicIcon from '@components/icons/magic';
-import ServerIcon from '@components/icons/server';
-import { card } from '@components/elements';
+import FlashIcon from '../icons/flash';
+import CodeDocumentIcon from '../icons/code-document';
+import MagicIcon from '../icons/magic';
+import ServerIcon from '../icons/server';
+import { card } from '../elements';
 
 interface FeaturesProps {}
 

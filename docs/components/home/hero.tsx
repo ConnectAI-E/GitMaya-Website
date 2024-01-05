@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { tvs, LinkIcon, Snippet, Logo } from '@components';
+import { tvs, LinkIcon, Snippet, Logo } from '../index';
 
 import AnimatedWave from './animated-wave';
 import GradientBG from './gradient-bg';

@@ -3,7 +3,7 @@
 node_modules/
 coverage/
 build/
-public/
+website/public/
 pnpm-lock.yaml
 !.*.js
 !.*.cjs

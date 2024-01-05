@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
-import { isProd } from '@utils';
+import { isProd } from '../utils';
 import '../styles/global.css';
 
 const App = ({ Component, pageProps }) => {

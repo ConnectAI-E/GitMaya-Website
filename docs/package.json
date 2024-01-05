@@ -1,5 +1,5 @@
 {
-  "name": "gitmaya-",
+  "name": "gitmaya-doc",
   "private": true,
   "license": "MIT",
   "version": "0.0.1",
@@ -14,23 +14,43 @@
     "url": "https://github.com/ConnectAI-E/GitMaya-Website/issues"
   },
   "scripts": {
-    "dev": "pnpm run -C docs dev",
-    "build": "pnpm run -C docs build",
-    "start": "pnpm run -C docs build",
-    "fmt": "./node_modules/.bin/prettier --write ."
+    "dev": "./node_modules/.bin/next dev",
+    "build": "./node_modules/.bin/next build",
+    "start": "./node_modules/.bin/next start",
+    "lint": "./node_modules/.bin/next lint",
+    "lint:fix": "./node_modules/.bin/next lint --fix",
+    "fmt": "./node_modules/.bin/prettier --write .",
+    "fmt:check": "./node_modules/.bin/prettier --write ."
   },
   "dependencies": {
+    "@react-aria/interactions": "^3.20.1",
+    "@react-aria/radio": "^3.10.0",
+    "@react-aria/ssr": "^3.9.1",
+    "@react-aria/tooltip": "^3.7.0",
+    "@react-aria/utils": "^3.23.0",
+    "@react-spring/web": "9.7.3",
+    "@react-stately/radio": "^3.10.1",
+    "@react-stately/tooltip": "^3.4.6",
     "@vercel/analytics": "^1.1.1",
     "classnames": "^2.5.0",
     "clsx": "^2.0.0",
+    "cobe": "0.6.3",
+    "framer-motion": "^10.16.16",
+    "next": "^14.0.4",
+    "nextra": "^2.13.2",
+    "nextra-theme-docs": "^2.13.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-spring": "9.7.3",
+    "sharp": "^0.33.1",
+    "tailwind-variants": "^0.1.19"
   },
   "devDependencies": {
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "autoprefixer": "^10.4.16",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -41,8 +61,10 @@
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.10",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
   },
   "engines": {

@@ -107,7 +107,7 @@ export function Cobe() {
         />
         <div className={'flex items-center justify-center'}>
           <div className={'flex  items-center justify-center px-12'}>
-            <YoutubeIcon className={' pt-0.5 group-hover:text-yellow'} size={40} />
+            <YoutubeIcon className={' pt-0.5 group-hover:text-[#ECA600]'} size={40} />
             <span
               className={'group-hover:opacity-85 '}
               style={{ fontSize: '1.8em', paddingLeft: '10px' }}

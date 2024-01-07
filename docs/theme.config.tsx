@@ -7,7 +7,7 @@ import { tvs } from '@components';
 import pkg from './package.json';
 import { ifInIndex } from '@utils';
 import { LogoDark, LogoLight } from '@components/logo/logo';
-import {Footer} from '@components/footer';
+import { Footer } from '@components/footer';
 
 const DEFAULT_VERSION = '0.0.1';
 
@@ -117,9 +117,7 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1
   },
   footer: {
-    text: (
-        <Footer />
-    )
+    text: <Footer />
   }
 };
 

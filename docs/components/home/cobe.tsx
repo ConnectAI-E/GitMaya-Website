@@ -124,7 +124,7 @@ export function Cobe() {
         </div>
         <div
           className={
-            'mt-4 flex items-center justify-center gap-2 text-4xl group-hover:opacity-85'
+            'mt-6 flex items-center justify-center gap-5 text-4xl group-hover:opacity-85'
           }
         >
           <Lark />

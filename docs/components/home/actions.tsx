@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
 import React from 'react';
-import { Compass } from 'lucide-react';
+import { Compass, Github } from 'lucide-react';
 import Link from 'next/link';
 
 import { Button } from '@components/button';
@@ -19,7 +19,7 @@ const Actions: FC<ActionProps> = () => {
         >
           <Link href="/explore">
             <span className="inline-flex h-full w-fit items-center gap-2 rounded-xl px-4 py-2 transition-all duration-300 dark:bg-neutral-900 dark:text-white group-hover:dark:bg-black">
-              <Compass className="h-4 w-4" />
+              <Github className="h-4 w-4" />
               Try with your github
             </span>
           </Link>

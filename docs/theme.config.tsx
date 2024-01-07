@@ -20,11 +20,11 @@ const getVersion = () => {
 const config: DocsThemeConfig = {
   darkMode: true,
   themeSwitch: {
-    // component:undefined,
+    component: undefined
   },
   nextThemes: {
-    defaultTheme: 'dark'
-    // forcedTheme: 'dark',
+    defaultTheme: 'dark',
+    forcedTheme: 'dark'
   },
   i18n: [
     { locale: 'en', text: 'English' },

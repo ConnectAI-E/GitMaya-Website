@@ -14,7 +14,7 @@ const Actions: FC<ActionProps> = () => {
       <div className="cta-container inline-flex justify-center gap-3.5">
         <Button
           asChild
-          className="hero-join-button group relative mx-auto hidden w-fit overflow-hidden rounded-xl p-[1px] font-bold transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#fff8] md:mr-0 lg:mr-auto dark:block"
+          className="hero-join-button group relative mx-auto  w-fit overflow-hidden rounded-xl p-[1px] font-bold transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#fff8] md:mr-0 lg:mr-auto dark:block"
           variant="outline"
         >
           <Link href="/explore">

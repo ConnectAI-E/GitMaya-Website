@@ -1,8 +1,10 @@
 import type { SVGProps } from 'react';
+
 import { useEffect, useRef } from 'react';
 import createGlobe from 'cobe';
 import { useSpring } from 'react-spring';
 import { YoutubeIcon } from 'lucide-react';
+
 import { Slack } from '@components/icons/slack';
 import { Discord } from '@components/icons/discord';
 import { Lark } from '@components/icons/lark';
@@ -100,9 +102,8 @@ export function Cobe() {
         }}
       >
         <Logo
-          className={'group-hover:opacity-85'}
+          className={'w-40 group-hover:opacity-85 md:w-[400px]'}
           style={{
-            width: '400px',
             margin: 'auto',
             display: 'block',
             marginBottom: 2
@@ -111,12 +112,11 @@ export function Cobe() {
         <div className={'flex items-center justify-center'}>
           <div className={'flex  items-center justify-center px-12'}>
             <YoutubeIcon
-              className={' pt-0.5 group-hover:text-[#ECA600]'}
-              size={40}
+              className={'size-6 pt-0.5 group-hover:text-[#ECA600] md:size-10'}
             />
             <span
-              className={'group-hover:opacity-85 '}
-              style={{ fontSize: '1.8em', paddingLeft: '10px' }}
+              className={'text-xl group-hover:opacity-85 md:text-4xl '}
+              style={{ paddingLeft: '10px' }}
             >
               Make Git Flow In Chat
             </span>
@@ -124,7 +124,7 @@ export function Cobe() {
         </div>
         <div
           className={
-            'mt-6 flex items-center justify-center gap-5 text-4xl group-hover:opacity-85'
+            'mt-4 flex items-center justify-center gap-5 text-2xl group-hover:opacity-85 md:mt-6 md:text-4xl'
           }
         >
           <Lark />

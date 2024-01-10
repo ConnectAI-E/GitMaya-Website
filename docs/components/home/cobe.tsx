@@ -115,7 +115,9 @@ export function Cobe() {
               className={'size-6 pt-0.5 group-hover:text-[#ECA600] md:size-10'}
             />
             <span
-              className={'text-md group-hover:opacity-85 md:text-4xl'}
+              className={
+                'text-nowrap text-lg group-hover:opacity-85 md:text-4xl'
+              }
               style={{ paddingLeft: '8px' }}
             >
               Make Git Flow In Chat

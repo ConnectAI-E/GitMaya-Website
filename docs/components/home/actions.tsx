@@ -27,7 +27,7 @@ const Actions: FC<ActionProps> = () => {
       </div>
       <div style={{ marginTop: '2rem' }} />
       <a
-        href="https://twitter.com/shuding_/status/1475916082875666441"
+        href=""
         style={{
           color: 'inherit',
           opacity: 0.7,
